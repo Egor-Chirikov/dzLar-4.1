@@ -12,7 +12,7 @@ typedef struct Cell Cell;
 
 int appStart(Cell* head, int vol) {
 	Cell* pNewCell;
-	if (!(pNewCell =(Cell*)(malloc(sizeof(Cell))))) {
+	if (!(pNewCell =(Cell*)malloc(sizeof(Cell)))) {
 		return 0;
 	}
 
