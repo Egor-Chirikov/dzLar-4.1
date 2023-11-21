@@ -24,36 +24,15 @@ int appStart(Cell* head, int vol) {
 
 int main() {
 	char inp;
-	int num, fNewNum, fend = 0;
+	int num;
 	Cell head = { -1, NULL };
 	Cell* pointer, *remPointer;
 
-	while (42)
+	while (scanf("%i", &num))
 	{
-		if (fend)
-			break;
-
-		num = 0;
-		fNewNum = 0;
-		while (42) {
-			scanf("%c", &inp);
-			if (inp == ' ')
-				break;
-			if (inp == '.') {
-				fend = 1;
-				break;
-			}
-
-			num *= 10;
-			num += inp - '0';
-			fNewNum = 1;
-		}
-
-		if (fNewNum) {
-			if (!(appStart(&head, num))) {
-				printf("NOT ENOUGH MEMORY!");
-				return 1;
-			}
+		if (!(appStart(&head, num))) {
+			printf("NOT ENOUGH MEMORY!");
+			return 1;
 		}
 	}
 
